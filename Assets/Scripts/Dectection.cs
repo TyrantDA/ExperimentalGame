@@ -16,12 +16,16 @@ public class Dectection : MonoBehaviour
 
     Patrol pat;
     NavMeshAgent agent;
+    bool seen;
+    Vector3 lastSeen;
     
 
     void Start()
     {
         pat = GetComponent<Patrol>();
         agent = GetComponent<NavMeshAgent>();
+        seen = false;
+        lastSeen = new Vector3(0f, 0f, 0f);
     }
     public void CheckForTargetInLineOfSight()
     {
@@ -34,6 +38,8 @@ public class Dectection : MonoBehaviour
                 Debug.Log("Detected Player");
                 pat.setPatrolling(false);
                 agent.destination = _mHitInfo.transform.position;
+                lastSeen = _mHitInfo.transform.position;
+                seen = true;
             }
             else
             {
@@ -47,16 +53,34 @@ public class Dectection : MonoBehaviour
         else
         {
             // no player detected, insert your own logic
-            Debug.Log("No Player detected");
+            Debug.Log("Player Losed");
+
             //search player
             pat.setPatrolling(true);
         }
     }
-   
+
+    private void OnDrawGizmos()
+    {
+        if (_bHasDetectedEnnemy)
+        {
+            Gizmos.color = Color.red;
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+        }
+
+        Gizmos.matrix = transform.localToWorldMatrix;
+
+        Gizmos.DrawCube(new Vector3(0f, 0f, mTargetDetectionDistance / 2f), new Vector3(mRaycastRadius, mRaycastRadius, mTargetDetectionDistance));
+    }
+
 
     // Update is called once per frame
     void Update()
     {
         CheckForTargetInLineOfSight();
+        //OnDrawGizmos();
     }
 }
