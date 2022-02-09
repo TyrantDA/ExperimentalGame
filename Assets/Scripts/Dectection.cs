@@ -8,6 +8,11 @@ public class Dectection : MonoBehaviour
     public float mRaycastRadius;  // width of our line of sight (x-axis and y-axis)
     public float mTargetDetectionDistance;  // depth of our line of sight (z-axis)
 
+    float currentTime;
+    float minTimeBetweenSpawns = 10;
+    float maxTimeBetweenSpawns = 50;
+
+
     private RaycastHit _mHitInfo;   // allocating memory for the raycasthit
     // to avoid Garbage
     private bool _bHasDetectedEnnemy = false;   // tracking whether the player
@@ -26,45 +31,131 @@ public class Dectection : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         seen = false;
         lastSeen = new Vector3(0f, 0f, 0f);
+        currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
     }
     public void CheckForTargetInLineOfSight()
     {
+        _bHasDetectedEnnemy = false;
         _bHasDetectedEnnemy = Physics.SphereCast(transform.position, mRaycastRadius, transform.forward, out _mHitInfo, mTargetDetectionDistance);
+
+       
 
         if (_bHasDetectedEnnemy)
         {
             if (_mHitInfo.transform.CompareTag("Player"))
             {
                 Debug.Log("Detected Player");
-                pat.setPatrolling(false);
-                agent.destination = _mHitInfo.transform.position;
                 lastSeen = _mHitInfo.transform.position;
+                agent.destination = lastSeen;
+                
                 seen = true;
             }
             else
             {
-                Debug.Log("No Player detected");
-                pat.setPatrolling(true);
 
+                if (!seen)
+                {
+                    Debug.Log("start Patrolling");
+                    pat.PatrolRunning();
+                }
+                else
+                {
+                    Debug.Log("start searching");
+                    agent.destination = lastSeen;
+                    if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
+                    {
+                        currentTime -= Time.deltaTime;
 
+                        if (currentTime <= 0)
+                        {
+                            seen = false;
+                            Debug.Log("stop search");
+                            currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+                        }
+                        else
+                        {
+                            transform.Rotate(Vector3.up * 4 * Time.deltaTime);
+                        }
+
+                    }
+                }
             }
 
         }
         else
         {
-            // no player detected, insert your own logic
-            Debug.Log("Player Losed");
+            if (!seen)
+            {
+                Debug.Log("start Patrolling");
+                pat.PatrolRunning();
+            }
+            else
+            {
+                Debug.Log("start searching");
+                agent.destination = lastSeen;
+                if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
+                {
+                    currentTime -= Time.deltaTime;
 
-            //search player
-            pat.setPatrolling(true);
+                    if (currentTime <= 0)
+                    {
+                        seen = false;
+                        Debug.Log("stop search");
+                        currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+                    }
+                    else
+                    {
+                        transform.Rotate(Vector3.up * 4 * Time.deltaTime);
+                    }
+                }
+            }
+
         }
-    }
+
+            //if (seen)
+            //{
+            //    // no player detected, insert your own logic
+            //    Debug.Log("Player Losed");
+
+            //    //search player
+            //    agent.destination = lastSeen;
+
+            //    if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
+            //    {
+
+            //        currentTime -= Time.deltaTime;
+
+            //        if (currentTime >= 0)
+            //        {
+
+
+            //            if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
+            //            {
+            //                Quaternion newRotation = Quaternion.AngleAxis(90, Vector3.up);
+            //                transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, .05f);
+            //            }
+            //        }
+            //    }
+            //}
+            //currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+            //seen = false;
+
+
+
+        }
 
     private void OnDrawGizmos()
     {
         if (_bHasDetectedEnnemy)
         {
-            Gizmos.color = Color.red;
+            if (_mHitInfo.transform.CompareTag("Player"))
+            {
+                Gizmos.color = Color.red;
+            }
+            else
+            {
+                Gizmos.color = Color.yellow;
+            }
         }
         else
         {

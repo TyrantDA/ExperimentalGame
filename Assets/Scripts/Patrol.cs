@@ -9,7 +9,6 @@ public class Patrol : MonoBehaviour
     public GameObject Patroller;
     public float speed;
 
-    bool moving;
     int currentMovingTo;
     GameObject target;
     NavMeshAgent agent;
@@ -19,7 +18,6 @@ public class Patrol : MonoBehaviour
     void Start()
     {
         target = closest(Patroller);
-        moving = true;
         agent = GetComponent<NavMeshAgent>();
         patrolling = false;
     }
@@ -88,10 +86,8 @@ public class Patrol : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void PatrolRunning()
     {
-        if (patrolling)
-        {
             agent.destination = target.transform.position;
             //float step = speed * Time.deltaTime;
             //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
@@ -102,7 +98,23 @@ public class Patrol : MonoBehaviour
             {
                 target = nextTarget();
             }
-        }
+    }
+
+    void Update()
+    {
+        //if (patrolling)
+        //{
+        //    agent.destination = target.transform.position;
+        //    //float step = speed * Time.deltaTime;
+        //    //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
+
+        //    //Debug.Log("patrol pos: " + transform.position.x + " : " + transform.position.z + " | point pos : "+ target.transform.position.x + " : " + target.transform.position.z);
+
+        //    if (transform.position.x == target.transform.position.x && transform.position.z == target.transform.position.z)
+        //    {
+        //        target = nextTarget();
+        //    }
+        //}
           
     }
 }
