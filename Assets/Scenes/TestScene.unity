@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -493,6 +493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Patroller
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903389822346851293, guid: 6b29cae8369f9ac44b6d9af052e14b3a,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b29cae8369f9ac44b6d9af052e14b3a, type: 3}
@@ -1449,6 +1454,11 @@ PrefabInstance:
       propertyPath: Camera
       value: 
       objectReference: {fileID: 307108619}
+    - target: {fileID: 4687444467041689466, guid: e796ed62a681e344d8f111b21e417710,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5668867326543683528, guid: e796ed62a681e344d8f111b21e417710,
         type: 3}
       propertyPath: m_Name

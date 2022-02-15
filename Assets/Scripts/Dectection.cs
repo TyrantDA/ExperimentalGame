@@ -35,7 +35,6 @@ public class Dectection : MonoBehaviour
     }
     public void CheckForTargetInLineOfSight()
     {
-        _bHasDetectedEnnemy = false;
         _bHasDetectedEnnemy = Physics.SphereCast(transform.position, mRaycastRadius, transform.forward, out _mHitInfo, mTargetDetectionDistance);
 
        
@@ -112,34 +111,6 @@ public class Dectection : MonoBehaviour
 
         }
 
-            //if (seen)
-            //{
-            //    // no player detected, insert your own logic
-            //    Debug.Log("Player Losed");
-
-            //    //search player
-            //    agent.destination = lastSeen;
-
-            //    if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
-            //    {
-
-            //        currentTime -= Time.deltaTime;
-
-            //        if (currentTime >= 0)
-            //        {
-
-
-            //            if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
-            //            {
-            //                Quaternion newRotation = Quaternion.AngleAxis(90, Vector3.up);
-            //                transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, .05f);
-            //            }
-            //        }
-            //    }
-            //}
-            //currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
-            //seen = false;
-
 
 
         }
@@ -171,7 +142,11 @@ public class Dectection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //CheckForTargetInLineOfSight();
+    }
+
+    private void FixedUpdate()
+    {
         CheckForTargetInLineOfSight();
-        //OnDrawGizmos();
     }
 }
