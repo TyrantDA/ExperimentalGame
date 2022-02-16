@@ -26,10 +26,11 @@ public class AgentDetection : MonoBehaviour
         {
             RaycastHit hitInfo;
 
-            if (Physics.Raycast(transform.position, (transform.position-t.position).normalized, out hitInfo, sightRange, detectLayers,QueryTriggerInteraction.Ignore))
+            //if (Physics.Raycast(transform.position, (transform.position-t.position).normalized, out hitInfo, sightRange, detectLayers,QueryTriggerInteraction.Ignore))
+            if (Physics.Linecast(transform.position, t.position, out hitInfo, detectLayers))
             {
                 Debug.Log("hit something: " + hitInfo.transform.gameObject.name);
-                if (hitInfo.transform ==t)
+                if (hitInfo.transform == t)
                 {
                     Debug.Log("Target in sight");
                     currentTarget = t;
@@ -42,6 +43,7 @@ public class AgentDetection : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         targets.Add(other.transform);
+        Debug.Log(other.transform.gameObject.name);
     }
 
 
