@@ -43,7 +43,7 @@ public class AgentDetection : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         targets.Add(other.transform);
-        Debug.Log(other.transform.gameObject.name);
+        //Debug.Log(other.transform.gameObject.name);
     }
 
 
