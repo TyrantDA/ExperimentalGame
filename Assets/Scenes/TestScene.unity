@@ -1658,3 +1658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mRaycastRadius: 10
   mTargetDetectionDistance: 40
+  detectLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
