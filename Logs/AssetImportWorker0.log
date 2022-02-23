@@ -176,3 +176,27 @@ Received Import Request.
 Start importing Assets/Scenes/Top Down Movement/NavMesh.asset using Guid(d392bf89dd4789a4fbd6b6d1a4ee3ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cdd15e237c6c4a706a5c178982a0b0a') in 0.013289 seconds
   Import took 0.032200 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.483891 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.908 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1403 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.4 MB.
+System memory in use after: 80.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1902.
+Total: 5.545100 ms (FindLiveObjects: 0.516100 ms CreateObjectMapping: 0.145200 ms MarkObjects: 4.809300 ms  DeleteObjects: 0.071800 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
