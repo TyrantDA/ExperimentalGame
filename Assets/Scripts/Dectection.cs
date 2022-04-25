@@ -101,7 +101,7 @@ public class Dectection : MonoBehaviour
                     if(!foundSomething)
                     {
 
-                        Debug.Log("start Patrolling");
+                        //Debug.Log("start Patrolling");
                         pat.PatrolRunning();
                     }
                 }
@@ -136,7 +136,7 @@ public class Dectection : MonoBehaviour
         {
             if (!seen)
             {
-                Debug.Log("start Patrolling");
+                //Debug.Log("start Patrolling");
                 pat.PatrolRunning();
             }
             else

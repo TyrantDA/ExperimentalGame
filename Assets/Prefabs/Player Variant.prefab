@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &474351087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668867326543683528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fa5ba92eae38141a8e9713788ee1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 1000
+  removeEachFrame: 1
+  foodHeal: 40
+  healthbar: {fileID: 0}
+  list: {fileID: 474351088}
+  food: {fileID: 11400000, guid: effd59beb9cb1a14aa002a8215bfa26c, type: 2}
+--- !u!114 &474351088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668867326543683528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf5d0c6c49dc004a9794fd00c62eeb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelContainer: {fileID: 0}
+  uiItemPrefab: {fileID: 508635062545721447, guid: d6f01c3bcee16d34eb3c10190925f585,
+    type: 3}
+  addAmount: 1
+  food: {fileID: 11400000, guid: effd59beb9cb1a14aa002a8215bfa26c, type: 2}
 --- !u!114 &1500701437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,6 +63,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7d15d1324c5d347b1d5d46fe4f381e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &474351089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668867326543683528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029ed4f31dd8c7244bfee379a7e08c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  player: {fileID: 5668867326543683528}
 --- !u!1001 &5301775817318288741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,17 +92,17 @@ PrefabInstance:
     - target: {fileID: 520286464390927017, guid: 8e2e1e0d075144a49b9af20827814832,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.57
+      value: 63.71
       objectReference: {fileID: 0}
     - target: {fileID: 520286464390927017, guid: 8e2e1e0d075144a49b9af20827814832,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4799995
+      value: 0.9999962
       objectReference: {fileID: 0}
     - target: {fileID: 520286464390927017, guid: 8e2e1e0d075144a49b9af20827814832,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.790003
+      value: 12.901325
       objectReference: {fileID: 0}
     - target: {fileID: 520286464390927017, guid: 8e2e1e0d075144a49b9af20827814832,
         type: 3}
@@ -93,6 +142,11 @@ PrefabInstance:
     - target: {fileID: 520286464390927021, guid: 8e2e1e0d075144a49b9af20827814832,
         type: 3}
       propertyPath: m_Name
+      value: Player Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 520286464390927021, guid: 8e2e1e0d075144a49b9af20827814832,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
