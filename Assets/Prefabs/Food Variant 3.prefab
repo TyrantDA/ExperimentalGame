@@ -79,7 +79,12 @@ PrefabInstance:
     - target: {fileID: 2379946541495153334, guid: dc6f0f0bace0757429183c8c14506f89,
         type: 3}
       propertyPath: m_Name
-      value: Food
+      value: Food Variant 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251239339125994658, guid: dc6f0f0bace0757429183c8c14506f89,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc6f0f0bace0757429183c8c14506f89, type: 3}

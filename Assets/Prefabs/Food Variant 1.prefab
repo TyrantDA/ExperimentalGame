@@ -11,9 +11,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.15731634
-  m_Height: 0.33127227
+  m_Height: 0.35485995
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0.014130726, z: -0.0020236224}
+  m_Center: {x: 0.000000059604645, y: -0.0017820597, z: -0.0020236224}
 --- !u!1001 &1514020126214531553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Food Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251239339125994658, guid: dc6f0f0bace0757429183c8c14506f89,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc6f0f0bace0757429183c8c14506f89, type: 3}

@@ -10,6 +10,10 @@ public class Dectection : MonoBehaviour
 
     public LayerMask detectLayers;
 
+    public float speed;
+    public GameObject image;
+    public AudioSource ping;
+
     float currentTime;
     float minTimeBetweenSpawns = 10;
     float maxTimeBetweenSpawns = 50;
@@ -27,7 +31,7 @@ public class Dectection : MonoBehaviour
     NavMeshAgent agent;
     bool seen;
     Vector3 lastSeen;
-    
+    bool played;
 
     void Start()
     {
@@ -65,13 +69,14 @@ public class Dectection : MonoBehaviour
                 {
                     Debug.Log("Detected");
                     lastSeen = hitColliders[hold].transform.position;
+
                     agent.destination = lastSeen;
 
                     seen = true;
                     _bHasDetectedEnnemy = false;
                 }
             }
-            foundSomething = false;
+            //foundSomething = false;
         }
 
 
@@ -199,5 +204,20 @@ public class Dectection : MonoBehaviour
     private void FixedUpdate()
     {
         CheckForTargetInLineOfSight();
+
+        if(seen)
+        {
+            if(!played)
+            {
+                ping.Play();
+                played = true;
+            }
+            image.SetActive(true);
+        }
+        else
+        {
+            image.SetActive(false);
+            played = false;
+        }
     }
 }

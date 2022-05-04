@@ -5,23 +5,21 @@ using UnityEngine;
 public class MyTimer : MonoBehaviour
 {
     float currentTime;
-    float minTimeBetweenSpawns = 1;
-    float maxTimeBetweenSpawns = 5;
 
     private void Start()
     {
-        currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+        currentTime = 0;
+        PlayerPrefs.SetFloat("TimePlayed", currentTime);
     }
 
+    public float getTime()
+    {
+        return currentTime;
+    }
 
     private void Update()
     {
-        currentTime -= Time.deltaTime;
-
-        if(currentTime<=0)
-        {
-            Debug.Log("fire");
-            currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
-        }
+        currentTime += Time.deltaTime;
+        PlayerPrefs.SetFloat("TimePlayed", currentTime);
     }
 }

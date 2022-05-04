@@ -24,10 +24,19 @@ public class TopDownCharacterMover : MonoBehaviour
         _input = GetComponent<InputHandler>();
     }
 
+    public float getSpeed()
+    {
+        return MovementSpeed;
+    }
+
+    public void setSpeed(float s)
+    {
+        MovementSpeed = s;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);
 

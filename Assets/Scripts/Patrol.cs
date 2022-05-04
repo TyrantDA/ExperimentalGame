@@ -9,17 +9,20 @@ public class Patrol : MonoBehaviour
     public GameObject Patroller;
     public float speed;
 
-    int currentMovingTo;
-    GameObject target;
+    public int currentMovingTo;
+    public GameObject target;
+    public float distance;
     NavMeshAgent agent;
+    private NavMeshPath path;
     bool patrolling;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = closest(Patroller);
+        target = patrolList[0];
         agent = GetComponent<NavMeshAgent>();
         patrolling = false;
+        path = new NavMeshPath();
     }
 
     public void setPatrolling(bool set)
@@ -53,7 +56,7 @@ public class Patrol : MonoBehaviour
         for (int x = 0; x < patrolList.Count; x++)
         {
             comare = Lenth(player, patrolList[x]);
-            if(comareHold < comare)
+            if(comareHold > comare)
             {
                 comareHold = comare;
                 key = x;
@@ -71,7 +74,7 @@ public class Patrol : MonoBehaviour
         return hold;
     }
 
-    GameObject nextTarget()
+    void nextTarget()
     {
         
 
@@ -82,22 +85,28 @@ public class Patrol : MonoBehaviour
             currentMovingTo = 0;
         }
 
-        return patrolList[currentMovingTo];
+        target = patrolList[currentMovingTo];
+        NavMesh.CalculatePath(transform.position, target.transform.position, NavMesh.AllAreas, path);
+        agent.SetPath(path);
     }
 
     // Update is called once per frame
     public void PatrolRunning()
     {
-            agent.destination = target.transform.position;
-            //float step = speed * Time.deltaTime;
-            //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
 
-            //Debug.Log("patrol pos: " + transform.position.x + " : " + transform.position.z + " | point pos : "+ target.transform.position.x + " : " + target.transform.position.z);
+        //float step = speed * Time.deltaTime;
+        //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
 
-            if (transform.position.x == target.transform.position.x && transform.position.z == target.transform.position.z)
-            {
-                target = nextTarget();
-            }
+        //Debug.Log("patrol pos: " + transform.position.x + " : " + transform.position.z + " | point pos : "+ target.transform.position.x + " : " + target.transform.position.z);
+        distance = agent.remainingDistance;
+        Debug.Log("point " + currentMovingTo + " | target " + target.name + " | Distance " + distance);
+        if (distance < 0.1f)
+        {
+            Debug.Log("next target");
+                nextTarget();
+            
+        }
+        
     }
 
     void Update()
