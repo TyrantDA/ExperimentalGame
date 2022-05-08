@@ -76,7 +76,7 @@ public class Dectection : MonoBehaviour
                     _bHasDetectedEnnemy = false;
                 }
             }
-            //foundSomething = false;
+            foundSomething = false;
         }
 
 

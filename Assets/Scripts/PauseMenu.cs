@@ -7,9 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuBackerIU;
     public GameObject ControlBackerIU;
+    public GameObject MapBackerIU;
 
     public static bool isPaused = false;
     public static bool controlOn = false;
+    public static bool mapOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +61,20 @@ public class PauseMenu : MonoBehaviour
         }
 
         
+    }
+
+    public void Map()
+    {
+        if (!mapOn)
+        {
+            MapBackerIU.SetActive(true);
+            mapOn = true;
+        }
+        else
+        {
+            MapBackerIU.SetActive(false);
+            mapOn = false;
+        }
     }
 
     // Update is called once per frame

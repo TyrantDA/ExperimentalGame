@@ -10,7 +10,7 @@ public class PrintTimer : MonoBehaviour
     void Start()
     {
         float hold = PlayerPrefs.GetFloat("TimePlayed", 0);
-        text.text = "Time Player : " + hold;
+        text.text = "Time Played : " + hold;
     }
 
     // Update is called once per frame

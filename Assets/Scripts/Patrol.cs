@@ -94,10 +94,7 @@ public class Patrol : MonoBehaviour
     public void PatrolRunning()
     {
 
-        //float step = speed * Time.deltaTime;
-        //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
-
-        //Debug.Log("patrol pos: " + transform.position.x + " : " + transform.position.z + " | point pos : "+ target.transform.position.x + " : " + target.transform.position.z);
+        
         distance = agent.remainingDistance;
         Debug.Log("point " + currentMovingTo + " | target " + target.name + " | Distance " + distance);
         if (distance < 0.1f)

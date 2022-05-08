@@ -1,0 +1,164 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1645; Version 2009; 64bit' Language: 'en' Physical Memory: 32716 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Alexander/Desktop/falmouth/gam704/Unity-3d-TopDownMovement-master/ExperimentalGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53736
+Successfully changed project path to: C:/Users/Alexander/Desktop/falmouth/gam704/Unity-3d-TopDownMovement-master/ExperimentalGame
+C:/Users/Alexander/Desktop/falmouth/gam704/Unity-3d-TopDownMovement-master/ExperimentalGame
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 56.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Alexander/Desktop/falmouth/gam704/Unity-3d-TopDownMovement-master/ExperimentalGame/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2488)
+    Vendor:   
+    VRAM:     8043 MB
+    Driver:   30.0.15.1215
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56508
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005028 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 52.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.577 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008298 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 48.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.463 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1777 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 160.4 MB.
+System memory in use after: 160.3 MB.
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2250.
+Total: 2.406800 ms (FindLiveObjects: 0.180800 ms CreateObjectMapping: 0.061000 ms MarkObjects: 1.779400 ms  DeleteObjects: 0.384700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Patroller.prefab
+  artifactKey: Guid(6b29cae8369f9ac44b6d9af052e14b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Patroller.prefab using Guid(6b29cae8369f9ac44b6d9af052e14b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3137deb954d6980910daea6e1401f8f5') in 0.117845 seconds 
+  Import took 0.121566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Prefabs/Player Variant.prefab
+  artifactKey: Guid(e796ed62a681e344d8f111b21e417710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player Variant.prefab using Guid(e796ed62a681e344d8f111b21e417710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9833a9d69337e9a7729790ef59453b77') in 0.039741 seconds 
+  Import took 0.042733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2576.811299 seconds.
+  path: Assets/Scenes/detectionTest.unity
+  artifactKey: Guid(559ed779f77e55f4da293a7e9f81215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/detectionTest.unity using Guid(559ed779f77e55f4da293a7e9f81215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d6373bf917fd8fb8e75c864d9db5580') in 0.007093 seconds 
+  Import took 0.011829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.300664 seconds.
+  path: Assets/Scenes/TestScene.unity
+  artifactKey: Guid(16186e6b2ba9cd94d90ca90f07c9cb82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestScene.unity using Guid(16186e6b2ba9cd94d90ca90f07c9cb82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4e13e3d6c75025d1cb3b505c360b599') in 0.006946 seconds 
+  Import took 0.010736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1658.114831 seconds.
+  path: Assets/Scenes/MyScene.unity
+  artifactKey: Guid(18747c207abcd444f94a96c2ff28172b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MyScene.unity using Guid(18747c207abcd444f94a96c2ff28172b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddd963ca9fa7cd03adbf210852911225') in 0.008072 seconds 
+  Import took 0.012286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.644968 seconds.
+  path: Assets/Terrain/Terrain_0_0_f58774f5-25d7-4eee-85c2-64de9faea3ac.asset
+  artifactKey: Guid(337641b34184e4d4bb6a71377d9a076f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Terrain_0_0_f58774f5-25d7-4eee-85c2-64de9faea3ac.asset using Guid(337641b34184e4d4bb6a71377d9a076f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree Tree Type0 01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 04 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 05 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 06 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 03 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type3 04 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: 'ce8a67c0bb7a5678494120a4f8ac5955') in 0.066503 seconds 
+  Import took 0.071110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003516 seconds.
+  path: Assets/Terrain/Terrain_0_0_f58774f5-25d7-4eee-85c2-64de9faea3ac.asset
+  artifactKey: Guid(337641b34184e4d4bb6a71377d9a076f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Terrain_0_0_f58774f5-25d7-4eee-85c2-64de9faea3ac.asset using Guid(337641b34184e4d4bb6a71377d9a076f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree Tree Type0 01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 04 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 05 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 06 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type0 03 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+The tree Tree Type3 04 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+
+ -> (artifact id: 'ce8a67c0bb7a5678494120a4f8ac5955') in 0.060735 seconds 
+  Import took 0.065842 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
