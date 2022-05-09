@@ -82,7 +82,7 @@ public class HealthCountDown : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift))
         {
             Debug.Log("shift");
-            totalHealth -= 50 * Time.deltaTime;
+            totalHealth -= 35 * Time.deltaTime;
             move.setSpeed(runningSpeed);
 
         }
